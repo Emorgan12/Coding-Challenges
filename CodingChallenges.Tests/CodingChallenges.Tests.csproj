@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Numatic.Apps.CodingChallenges.Tests</RootNamespace>
+    <Authors>Numatic International Ltd.</Authors>
+    <Company>Numatic International Ltd.</Company>
+    <Product>Numatic.Apps.Tests</Product>
+    <Description>Add a description...</Description>
+    <Copyright>Copyright Numatic International Ltd.</Copyright>
+    <NeutralLanguage>en</NeutralLanguage>
+    <AssemblyVersion>0.0.0</AssemblyVersion>
+    <FileVersion>0.0.0</FileVersion>
+    <Version>0.0.0</Version>
+    <Configurations>Local;Release</Configurations>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.0.2" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.0.2" />
+  </ItemGroup>
+
+</Project>

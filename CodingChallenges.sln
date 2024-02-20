@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingChallenges", "CodingChallenges.csproj", "{3864CAC6-B651-487C-8105-44296A1FFC7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingChallenges.Tests", "CodingChallenges.Tests\CodingChallenges.Tests.csproj", "{B13FD744-6570-40B3-BE2C-D827233F3B31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Local|Any CPU = Local|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3864CAC6-B651-487C-8105-44296A1FFC7F}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{3864CAC6-B651-487C-8105-44296A1FFC7F}.Local|Any CPU.Build.0 = Local|Any CPU
+		{3864CAC6-B651-487C-8105-44296A1FFC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3864CAC6-B651-487C-8105-44296A1FFC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B13FD744-6570-40B3-BE2C-D827233F3B31}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{B13FD744-6570-40B3-BE2C-D827233F3B31}.Local|Any CPU.Build.0 = Local|Any CPU
+		{B13FD744-6570-40B3-BE2C-D827233F3B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B13FD744-6570-40B3-BE2C-D827233F3B31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E39C8A8-A871-476E-AF16-36190D75492F}
+	EndGlobalSection
+EndGlobal

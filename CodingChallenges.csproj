@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Local;Release</Configurations>
+    <PackageId>CodingChallenges</PackageId>
+    <Version>0.0.0</Version>
+    <Authors>Numatic International Ltd.</Authors>
+    <Company>Numatic International Ltd.</Company>
+    <Product>Numatic.Apps</Product>
+    <Description>Add a description...</Description>
+    <Copyright>Copyright Numatic International Ltd.</Copyright>
+    <AssemblyVersion>0.0.0</AssemblyVersion>
+    <FileVersion>0.0.0</FileVersion>
+    <RootNamespace>Numatic.Apps.CodingChallenges</RootNamespace>
+    <AssemblyName>CodingChallenges</AssemblyName>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Local|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE;LOCAL;NETCOREAPP2_0</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'=='Local'">
+    <None Update="AppSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="CodingChallenges.Tests\**" />
+    <Content Remove="CodingChallenges.Tests\**" />
+    <EmbeddedResource Remove="CodingChallenges.Tests\**" />
+    <None Remove="CodingChallenges.Tests\**" />
+  </ItemGroup>
+</Project>
