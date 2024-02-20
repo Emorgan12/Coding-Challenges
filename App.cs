@@ -8,6 +8,9 @@ using Microsoft.Extensions.Options;
 //using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Net.Http.Headers;
+using Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments;
+using System.Linq;
+using System.Drawing.Printing;
 
 namespace Numatic.Apps.CodingChallenges
 {
@@ -34,8 +37,10 @@ namespace Numatic.Apps.CodingChallenges
             
           int average = Challenge3(new int[] { 4, 5, 6 });
             Console.WriteLine(average);
-            int count = Challenge2("Hello There");
+            int count = Challenge2("the quick brown fox jumps over the lazy dog");
             Console.WriteLine(count);
+            bool isPalindrome = Challenge1("Hello world!");
+            Console.WriteLine(isPalindrome);
         }
 
         /*----------- CHALLENGE #1 START -----------*/
@@ -70,9 +75,30 @@ namespace Numatic.Apps.CodingChallenges
 
         // CODE GOES HERE
 
-        public void Challenge1()
+        public bool Challenge1(string Testpalindrome)
         {
-               
+            bool isPalindrome = false;
+               foreach (char c in Testpalindrome)
+            {
+                if (!char.IsLetterOrDigit(c))
+                    Testpalindrome= Testpalindrome.Replace(c, ' ');
+
+            }
+               Testpalindrome = Testpalindrome.Replace(" ", string.Empty);
+               Testpalindrome = Testpalindrome.ToLower();
+            char[] characters = Testpalindrome.ToCharArray();
+            for (int i = 0; i < Testpalindrome.Length; i++)
+            {
+                if (characters[i] == characters[characters.Length - 1 - i])
+                    isPalindrome = true;
+                    
+                else
+                    isPalindrome = false;
+                if (!isPalindrome)
+                    break;
+            }
+            return isPalindrome;
+            
         }
 
         /*------------ CHALLENGE #1 END ------------*/
@@ -106,18 +132,18 @@ namespace Numatic.Apps.CodingChallenges
         public int Challenge2(string sentence)
         {
             int count = 0;
-            
+            List<string> ListOfWords = new List<string>();
             sentence= sentence.ToLower();
-            string[] words = sentence.Split(' ');
-            for(int i = 0; i < words.Length; i++)
+            foreach (string word in sentence.Split(" "))
             {
-                for (int j = 0; j < words[i].Length; j++)
+                if (!ListOfWords.Contains(word))
                 {
-                    if (words[j] != words[i])
-                        count++;
+                    count++;
                 }
+                ListOfWords.Add(word);
             }
-            
+                
+                
             return count;
         }
         
